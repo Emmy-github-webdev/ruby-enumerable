@@ -1,17 +1,14 @@
 module MyEnumerable
-  # All module
-  def all(&block)
+  def all?(&block)
     all_result = @list.map(&block)
     !all_result.include? false
   end
 
-  # Any Module
-  def any(&block)
+  def any?(&block)
     any_result = @list.map(&block)
-    !any_result.include? false
+    any_result.include? true
   end
 
-  # Filter
   def filter
     filter = []
     @list.each do |item|
