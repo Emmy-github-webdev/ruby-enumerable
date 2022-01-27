@@ -3,7 +3,7 @@ class MyList
     @list = arg
   end
 
-  def Each
-    
+  def each(&block)
+    @list.each(&block)
   end
 end
