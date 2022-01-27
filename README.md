@@ -1,73 +1,76 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+# Ruby Enumerable
 
-# Project Name
+Class to manipulate a list of elementes using and external module.
 
-> Description the project.
+## Build with
 
-
-## Built With
-
-- Major languages
-- Frameworks
-- Technologies used
-
-## Live Demo (if available)
-
-[Live Demo Link](https://livedemo.com)
-
+- Ruby
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
+You will need to have Ruby installed.
 
+Clone this repo and enter the directory.
 
-To get a local copy up and running follow these simple example steps.
+```bash
+git clone https://github.com/Emmy-github-webdev/ruby-enumerable
+cd ruby-enumerable
+```
 
-### Prerequisites
+Run the Interactive Ruby Shell.
 
-### Setup
+```bash
+irb
+```
 
-### Install
+Load the file.
 
-### Usage
+```ruby
+load './my_list.rb'
+```
 
-### Run tests
+Test the methods.
 
-### Deployment
-
-
+```ruby
+# Create list
+irb> list = MyList.new(1, 2, 3, 4)
+=> #<MyList: @list=[1, 2, 3, 4]>
+# Test #all?
+irb> list.all? {|e| e < 5}
+=> true
+irb> list.all? {|e| e > 5}
+=> false
+# Test #any?
+irb> list.any? {|e| e == 2}
+=> true
+irb> list.any? {|e| e == 5}
+=> false
+# Test #filter
+irb> list.filter {|e| e.even?}
+=> [2, 4]
+```
 
 ## Authors
 
-👤 **Author1**
+👤 **Piero Lescano**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [GitHub](https://github.com/piero-vic).
+- Twitter: [Twitter](https://twitter.com/v1ccenzo).
+- LinkedIn: [Linkedin](https://www.linkedin.com/in/piero-lescano).
 
-👤 **Author2**
+👤 **Emmanuel Ogah**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [GitHub](https://github.com/Emmy-github-webdev).
+- Twitter: [Twitter](https://twitter.com/OgaemmanuelOga).
+- LinkedIn: [Linkedin](https://www.linkedin.com/in/emmanuel-oga-16171584/).
+
 
 ## 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/Emmy-github-webdev/ruby-enumerable/issues).
 
 ## Show your support
 
 Give a ⭐️ if you like this project!
-
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
-
-## 📝 License
-
-This project is [MIT](./MIT.md) licensed.
